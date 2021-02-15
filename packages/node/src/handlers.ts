@@ -147,7 +147,6 @@ function extractExpressTransactionName(
 
 type TransactionNamingScheme = 'path' | 'methodPath' | 'handler';
 
-/** JSDoc */
 function extractTransaction(req: ExpressRequest, type: boolean | TransactionNamingScheme): string {
   switch (type) {
     case 'path': {
@@ -166,7 +165,6 @@ function extractTransaction(req: ExpressRequest, type: boolean | TransactionNami
 /** Default user keys that'll be used to extract data from the request */
 const DEFAULT_USER_KEYS = ['id', 'username', 'email'];
 
-/** JSDoc */
 function extractUserData(
   user: {
     [key: string]: any;
@@ -406,7 +404,6 @@ export function requestHandler(
   };
 }
 
-/** JSDoc */
 interface MiddlewareError extends Error {
   status?: number | string;
   statusCode?: number | string;
@@ -416,7 +413,6 @@ interface MiddlewareError extends Error {
   };
 }
 
-/** JSDoc */
 function getStatusCodeFromResponse(error: MiddlewareError): number {
   const statusCode = error.status || error.statusCode || error.status_code || (error.output && error.output.statusCode);
   return statusCode ? parseInt(statusCode as string, 10) : 500;
