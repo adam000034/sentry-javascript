@@ -17,8 +17,8 @@
   },
   "dependencies": {
     "@sentry/hub": "6.2.1",
-    "@sentry/scope": "7.0.0-alpha.0",
-    "@sentry/types": "6.2.1"
+    "@sentry/types": "6.2.1",
+    "@sentry/utils": "6.2.1"
   },
   "scripts": {
     "build": "run-p build:es5 build:esm",
